@@ -1,0 +1,184 @@
+::selection {
+  color: white;
+  background: rgb(146, 146, 146);
+}
+
+.header {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom:0px;
+}
+
+input.default {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  padding: 10px 0;
+  transition: 2.5s;
+  width: 1px;
+  color: #4F5554;
+  /* border-bottom:1px solid black; */
+}
+
+input.default:focus-visible {
+  background-color: transparent;
+  outline: none;
+}
+
+.form-input-container {
+  width: 600px;
+}
+
+.otp-input{
+  width:40px;
+  padding:8px;
+  height:45px;
+  border-radius:10px;
+  background-color: #d6d6d6;
+  border:none;
+  margin:5px;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+#form-input-container-1 {
+  margin-top: 50px;
+  position: relative;
+  transition: 1s;
+}
+
+#form-input-container-2 {
+  opacity: 0;
+  transition: 1s;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#input-money {
+  border: none;
+  width:550px!important;
+}
+
+.input-error {
+  color: #FF0000;
+  margin: 0px;
+}
+
+.shake-animation {
+  animation: shake 0.5s;
+}
+
+.custom-toast {
+  position: fixed;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: white;
+  transform: translate(200%);
+  bottom:30px;
+  right:50px;
+}
+
+.toast-start{
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.toast-finish{
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 1s forwards;
+}
+
+.loader {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #000000;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
