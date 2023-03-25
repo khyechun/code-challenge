@@ -69,7 +69,6 @@ export default function Form() {
       amountToSend.current.style.width = "600px"
       setTimeout(() => {
         amountToSend.current.focus()
-        amountToSend.current.select()
       }, 100);
       setStep(2)
     } else if (step == 2) {
@@ -82,7 +81,12 @@ export default function Form() {
   const handleAmountChange = (event) => {
     const val = event.target.value
     if (isNaN(val)) return
-    setAmount(val)
+    if (val[0] == 0) {
+      setAmount(val.slice(1))
+    }
+    else {
+      setAmount(val)
+    }
   }
 
   const resetTransaction = () => {
